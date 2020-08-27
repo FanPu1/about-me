@@ -1,6 +1,7 @@
 $( document ).ready(function() { //https://learn.jquery.com/using-jquery-core/document-ready/
-  //$("#national-park-html").hide();
-  $("#loading-html").ready(()=>{
+  //$("#national-park-html").show();
+  $("#national-park-html").hide();
+  $("#loading-html").on("load",()=>{
     console.log("loading");
     $("#national-park").mouseenter( 
       ()=>{
