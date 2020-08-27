@@ -14,6 +14,7 @@
     <!-- CSS Files -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <link href="./css/user.css" rel="stylesheet" />
   </head>
   <body>
     <div>
@@ -112,11 +113,15 @@
                       </div>
                       <div id="national-park-html" class="container">
                         <iframe type="text/html"
-                          src="https://hello-national-park.herokuapp.com/"
+                          style="visibility:hidden;" 
+                          onload="this.style.visibility='visible';"
+                          id="loading-html"
+                          src="https://hello-national-park.herokuapp.com"
                           width="100%"
                           height="300" 
                           frameborder="0"
                           ></iframe>
+                        <a href="https://hello-national-park.herokuapp.com/" target="_blank">Visit this website</a>
                       </div>
                     </div>
                     <hr>
@@ -182,8 +187,6 @@
                   </script>, made by Fan Pu
                 </span>
               </div>
-            </div>
-          </div>
         </footer>
       </div>
     </div>
