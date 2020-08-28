@@ -1,15 +1,19 @@
 $( document ).ready(function() { //https://learn.jquery.com/using-jquery-core/document-ready/
   //$("#national-park-html").show();
   $("#national-park-html").hide();
-  $("#loading-html").on("load",()=>{
-    console.log("loading");
+  $("#iframe-national-park").on("load",()=>{
     $("#national-park").mouseenter( 
       ()=>{
         $("#national-park-html").show(500);
-        console.log("mourse in");
       }
      ).mouseleave( 
       // do nothing
+    );
+
+    $("#iframe-national-park").mouseenter(
+      ()=>{$("#iframe-national-park").attr("height", "500");}
+    ).mouseleave(
+      ()=>{$("#iframe-national-park").attr("height", "300");}
     );
   });
 });
