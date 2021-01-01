@@ -1,4 +1,11 @@
 $( document ).ready(function() { //https://learn.jquery.com/using-jquery-core/document-ready/
+  const url = "https://usage-checker.herokuapp.com/stats";
+  const requestBody = { 
+    serviceName: "about_me_page", 
+    methodName: "03" 
+   };
+   $.post(url, requestBody).done(data => {console.log(data);});
+
   //$("#national-park-html").show();
   $("#national-park-html").hide();
   $("#iframe-national-park").on("load",()=>{
